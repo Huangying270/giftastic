@@ -52,7 +52,7 @@ $(document).ready(function(){
         return;
     })
 
-    $(document).on("click", displayGifs);
+    $("#confirmButton").on("click", displayGifs);
 
 
 
