@@ -36,7 +36,7 @@ $(document).ready(function(){
                 var p = $("<p>").text("Rating: " + rating);
                 newDiv.append(p)
 
-                $("#display-gif").append(newDiv);
+                $("#display-gif").prepend(newDiv);
 
             }
 
@@ -46,13 +46,12 @@ $(document).ready(function(){
 
     $("#confirmButton").on("click", function(){
 
+        displayGifs();
         var input = $("#user-input").val();
         displayedGiphy.push(input);
 
         return;
     })
-
-    $("#confirmButton").on("click", displayGifs);
 
 
 
