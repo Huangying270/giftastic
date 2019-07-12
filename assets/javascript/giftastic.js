@@ -24,9 +24,9 @@ $(document).ready(function(){
                 var newDiv = $("<div>");
                 newDiv.addClass("gifholder");
 
-                $("<img>").attr("src", results[i].images.original_still.url);
-                $("<img>").attr("data-still", results[i].images.original_still.url);
-                $("<img>").attr("data-animate", results[i].images.original.url);
+                $("<img>").attr("src", results[i].images.fixed_height.url);
+                $("<img>").attr("data-still", results[i].images.fixed_height.url);
+                $("<img>").attr("data-animate", results[i].images.fixed_height.url);
                 $("<img>").attr("data-state", "still");
                 $("<img>").attr("class", "gif");
                 newDiv.append($("<img>"));
