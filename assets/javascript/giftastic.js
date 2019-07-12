@@ -21,15 +21,16 @@ $(document).ready(function(){
 
             for(var i = 0; i < 10; i++) {
 
+                var newGif = $("<img>");
                 var newDiv = $("<div>");
                 newDiv.addClass("gifholder");
 
-                $("<img>").attr("src", results[i].images.fixed_height.url);
-                $("<img>").attr("data-still", results[i].images.fixed_height.url);
-                $("<img>").attr("data-animate", results[i].images.fixed_height.url);
-                $("<img>").attr("data-state", "still");
-                $("<img>").attr("class", "gif");
-                newDiv.append($("<img>"));
+                newGif.attr("src", results[i].images.fixed_height.url);
+                newGif.attr("data-still", results[i].images.fixed_height.url);
+                newGif.attr("data-animate", results[i].images.fixed_height.url);
+                newGif.attr("data-state", "still");
+                newGif.attr("class", "gif");
+                newDiv.append(newGif);
 
                 var rating = results[i].rating;
 
