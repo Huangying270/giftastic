@@ -2,12 +2,12 @@ $(document).ready(function(){
 
     var displayedGiphy = ["Pikachu", "Eevee", "Brock", "Togepi"];
 
-    function displayGifs(){
-
+    function displayGifs(input){
+        console.log(input);
         // Clears displayed gifs
         $("#display-gif").empty();
 
-        var input = $(this).attr("data-name");
+        //var input = $(this).attr("data-name");
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + input +"&limit=10&api_key=Kcj2pSMDpIaD2MCZxbsaZc4vX4NtAh0B";
 
         $.ajax({
@@ -45,10 +45,15 @@ $(document).ready(function(){
 
     }
 
-    $("#confirmButton").on("click", function(){
+    $("#confirmButton").on("click", function(event){
 
-        displayGifs();
+        event.preventDefault();
+        console.log($("#user-input").val());
+        console.log($("#user-input"));
         var input = $("#user-input").val();
+        console.log(input);
+        displayGifs(input);
+        
         displayedGiphy.push(input);
 
         return;
